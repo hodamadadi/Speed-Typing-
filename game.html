@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Typing Game</title>
+    <link rel="stylesheet" href="./game.css" />
+    <link rel="icon" href="icons8-h-48.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Playwrite+NZ:wght@100..400&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Playwrite+NZ:wght@100..400&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+      <body>
+        <div class="container">
+          <h1>Speed Typing Game</h1>
+          <div id="game">
+            <div id="text-to-type">Press "Start Game" to begin.</div>
+            <textarea id="user-input" placeholder="Start typing here..."></textarea>
+            <button id="start-game" class="one">Start Game</button>
+            <button id="reset-game" class="one">Reset Game</button>
+            <div id="stats">
+              <p><i class="fa-solid fa-clock fa-fade"></i> Time: <span id="time">0</span> seconds</p>
+              <p><i class="fa-solid fa-bolt fa-fade"></i> WPM: <span id="wpm">0</span></p>
+              <p><i class="fa-solid fa-text-slash fa-fade"></i> Mistakes: <span id="mistakes">0</span></p>
+              <p><i class="fa-solid fa-award fa-fade"></i> Score: <span id="score">0</span></p>
+              <div id="progress-bar">
+                <div id="progress"></div>
+              </div>
+              <p id="progress-text">Good</p>
+            </div>
+          </div>
+          <div id="result-container">
+            <h2>Results</h2>
+            <div id="result-window">
+              <p><strong>Text to Type:</strong> <span id="result-text"></span></p>
+              <p><strong>Time Taken:</strong> <span id="result-time">0</span> seconds</p>
+              <p><strong>WPM:</strong> <span id="result-wpm">0</span></p>
+              <p><strong>Mistakes:</strong> <span id="result-mistakes">0</span></p>
+              <p><strong>Typing Level:</strong> <span id="result-progress-text">Good</span></p>
+              <div id="result-progress-bar">
+                <div id="result-progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- audio -->
+        <audio id="reset-sound" src="button-2-214383.mp3" preload="auto"></audio>
+        <audio id="start-sound" src="spacebar-click-keyboard-199448.mp3" preload="auto"></audio>
+        <audio id="result-sound" src="collect-points-190037.mp3" preload="auto"></audio>
+        <section class="trial-block shadow3" id="ContactUs">
+          <div class="height450">
+            <div class="section-title text-center">
+              <!-- contact me icon -->
+              <h3>Contact Me</h3>
+              <span class="section-title-line section-title-line"></span>
+            </div>
+            <div class="social-overlap process-scetion mt100">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-10">
+                    <div class="social-bar">
+                      <div class="social-icons mb-3 iconpad text-center">
+                        <a
+                          href="https://www.facebook.com/Hoda846"
+                          target="_blank"
+                          class="slider-nav-item"
+                          ><i
+                            class="fab fa-facebook fa-fade"
+                            style="
+                              --fa-animation-duration: 2s;
+                              --fa-fade-opacity: 0.6;
+                            "
+                          ></i
+                        ></a>
+                        <a
+                          href="https://github.com/hodamadadi"
+                          target="_blank"
+                          class="slider-nav-item fa-fade"
+                          style="
+                            --fa-animation-duration: 2s;
+                            --fa-fade-opacity: 0.6;
+                          "
+                          ><i class="fa-brands fa-github fa-fade"></i
+                        ></a>
+                        <a
+                          href="https://www.instagram.com/pinklady.rm"
+                          target="_blank"
+                          class="slider-nav-item"
+                          style="
+                            --fa-animation-duration: 2s;
+                            --fa-fade-opacity: 0.6;
+                          "
+                          ><i class="fab fa-instagram fa-fade"></i
+                        ></a>
+                        <a
+                          href="https://www.x.com/HodaMadadi"
+                          target="_blank"
+                          class="slider-nav-item"
+                          style="
+                            --fa-animation-duration: 2s;
+                            --fa-fade-opacity: 0.6;
+                          "
+                          ><i class="fab fa-x fa-fade"></i
+                        ></a>
+                        <a
+                          href="https://www.linkedin.com/in/Hoda-Madadi"
+                          target="_blank"
+                          class="slider-nav-item"
+                          style="
+                            --fa-animation-duration: 2s;
+                            --fa-fade-opacity: 0.6;
+                          "
+                          ><i class="fab fa-linkedin fa-fade"></i
+                        ></a>
+                        <a
+                          href="https://www.threads.net/pinklady.rm"
+                          target="_blank"
+                          class="slider-nav-item"
+                          style="
+                            --fa-animation-duration: 2s;
+                            --fa-fade-opacity: 0.6;
+                          "
+                          ><i class="fa-brands fa-threads fa-fade"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </body>
+    </html>
+    <script src="./game.js"></script>
+  </body>
+</html>
